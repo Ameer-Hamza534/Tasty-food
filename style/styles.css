@@ -439,6 +439,13 @@ img {
   max-width: 100%;
 }
 
+.reservation__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .reservation .section-title {
   color: #fff !important;
 }

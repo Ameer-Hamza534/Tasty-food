@@ -28,15 +28,14 @@ const scrollActive = () => {
     const sectionTop = current.offsetTop - 50;
 
     const sectionId = current.getAttribute("id");
+    const menuLink = document.querySelector(`.nav__menu a[href="#${sectionId}"]`);
 
-    const menuLink = document.querySelector(
-      ".nav__menu a[href*=" + sectionId + "]"
-    );
-
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      menuLink.classList.add("active-link");
-    } else {
-      menuLink.classList.remove("active-link");
+    if (menuLink) {
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        menuLink.classList.add("active-link");
+      } else {
+        menuLink.classList.remove("active-link");
+      }
     }
   });
 };
@@ -105,7 +104,7 @@ sr.reveal(
             .services__content, .menu__content,
             .ingredients__data, .ingredients__img,
             .app__data, .app__img,
-            .reservation,
+            .reservation__data,
             .contact__data, .contact__button,
             .footer__content`,
   {
