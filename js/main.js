@@ -94,7 +94,7 @@ themeButton.addEventListener("click", () => {
 const sr = ScrollReveal({
   origin: "top",
   distance: "30px",
-  duration: 2000,
+  duration: 1000,
   reset: true,
 });
 
@@ -108,6 +108,6 @@ sr.reveal(
             .contact__data, .contact__button,
             .footer__content`,
   {
-    interval: 200,
+    interval: 100,
   }
 );
